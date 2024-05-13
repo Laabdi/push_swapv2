@@ -27,15 +27,15 @@ static void	free_str_array(char **arr)
 		free(arr);
 	}
 }
-// void	print_stack(t_list **stack)
-// {
-// 	t_list *tmp = *stack;
-// 	while(tmp)
-// 	{
-// 		printf("%d ,",tmp->value);
-// 		tmp = tmp->next;
-// 	}
-// }
+void	print_stack(t_list **stack)
+{
+	t_list *tmp = *stack;
+	while(tmp)
+	{
+		printf("%d ,",tmp->value);
+		tmp = tmp->next;
+	}
+}
 int	main(int ac, char **av)
 {
 	t_list	*stack_a;
@@ -55,10 +55,6 @@ int	main(int ac, char **av)
 	stack_b = NULL;
 	stack_a = fill_stack(nums);
 	ft_loop(&stack_a, &stack_b);
-    if(ft_is_sorted(&stack_a) == 0)
-        KO_handler();
-    	else
-        	OK_handler();
 	free_stack(stack_a);
 	if (stack_b != NULL)
 		free(stack_b);

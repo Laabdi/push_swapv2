@@ -26,13 +26,13 @@ int ft_is_sorted(t_list **stack)
 {
     t_list *tmp;
     tmp = *stack;
-    while(tmp)
+    while(tmp->next)
     {
-        if(tmp->value < tmp->next->value)
-        return 1;
+        if(tmp->value > tmp->next->value)
+        return 0;
         tmp = tmp->next;
     }
-    return 0;
+    return 1;
 }
 void ft_loop(t_list **stack_a, t_list **stack_b)
 {
@@ -40,8 +40,14 @@ void ft_loop(t_list **stack_a, t_list **stack_b)
     {
         char *s = get_next_line(0);
         if(s == NULL)
+            break;
         read_execution(stack_a, stack_b, s);
-        else
-        exit(0);
     }
+    // if(*stack_b != NULL)
+    // // print_stack(stack_b);
+    //     KO_handler();
+    if(ft_is_sorted(stack_a) == 0)
+        KO_handler();
+    else
+        OK_handler();
 }
