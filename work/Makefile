@@ -44,7 +44,9 @@ BONUS_SRC = reading.c \
 	spliting_utils.c \
 	ft_error_handler.c \
 	push_swap.c \
-	helpers.c
+	helpers.c \
+	actions2.c \
+	actions3.c
 
 # Updated paths for header and source files
 HEADER_PATH = includes/

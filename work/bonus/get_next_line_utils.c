@@ -1,6 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: moaregra <moaregra@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/16 10:42:20 by moaregra          #+#    #+#             */
+/*   Updated: 2024/05/16 10:42:38 by moaregra         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
-
-
 
 char	*ft_strchr(char *s, int c)
 {
@@ -8,7 +18,7 @@ char	*ft_strchr(char *s, int c)
 
 	i = 0;
 	if (!s)
-	return (NULL);
+		return (NULL);
 	while (s[i])
 	{
 		if (s[i] == (char)c)
@@ -41,7 +51,7 @@ char	*ft_strjoinn(char *stash, char *buffer)
 	i = -1;
 	j = 0;
 	while (stash[++i] != '\0')
-			line[i] = stash[i];
+		line[i] = stash[i];
 	while (buffer[j] != '\0')
 		line[i++] = buffer[j++];
 	line[ft_strlen(stash) + ft_strlen(buffer)] = '\0';

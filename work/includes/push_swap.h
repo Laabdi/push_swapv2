@@ -6,7 +6,7 @@
 /*   By: moaregra <moaregra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 10:53:21 by moaregra          #+#    #+#             */
-/*   Updated: 2024/05/12 17:58:30 by moaregra         ###   ########.fr       */
+/*   Updated: 2024/05/16 10:46:08 by moaregra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 # define PUSH_SWAP_H
 
 # ifndef BUFFER_SIZE
-# define BUFFER_SIZE 2
-#endif
+#  define BUFFER_SIZE 2
+# endif
 # include <limits.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -88,26 +88,27 @@ int					num_cmp(char *s1, char *s2);
 char				**splited(char **av);
 char				*ft_strjoin(char *s1, char *s2);
 // bonus
-void	do_ra_bonus(t_list **stack_a);
-void	do_rb_bonus(t_list **stack_b);
-void	do_rr_bonus(t_list **stack_a, t_list **stack_b);
-void	do_rra_bonus(t_list **stack);
-void	do_rrb_bonus(t_list **stack);
-void	do_rrr_bonus(t_list **stack_a, t_list **stack_b);
-void	do_pa_bonus(t_list **stack_a, t_list **stack_b);
-void	do_pb_bonus(t_list **stack_a, t_list **stack_b);
-void	do_sa_bonus(t_list **stack_a);
-void	do_sb_bonus(t_list **stack_b);
-void	do_ss_bonus(t_list **stack_a, t_list **stack_b);
-void    KO_handler(void);
-void    OK_handler(void);
-int 	ft_is_sorted(t_list **stack);
-void	 ft_loop(t_list **stack_a, t_list **stack_b);
-char 	*get_next_line(int fd);
-size_t	ft_strlenn(const char *s);
-char	*ft_strjoinn(char *stash, char *buffer);
-char	*ft_strchr(char *s, int c);
-size_t	ft_strlenn(const char *s);
-void read_execution(t_list **stack_a,t_list **stack_b,char *str);
+void				do_ra_bonus(t_list **stack_a);
+void				do_rb_bonus(t_list **stack_b);
+void				do_rr_bonus(t_list **stack_a, t_list **stack_b);
+void				do_rra_bonus(t_list **stack);
+void				do_rrb_bonus(t_list **stack);
+void				do_rrr_bonus(t_list **stack_a, t_list **stack_b);
+void				do_pa_bonus(t_list **stack_a, t_list **stack_b);
+void				do_pb_bonus(t_list **stack_a, t_list **stack_b);
+void				do_sa_bonus(t_list **stack_a);
+void				do_sb_bonus(t_list **stack_b);
+void				do_ss_bonus(t_list **stack_a, t_list **stack_b);
+void				ko_handler(void);
+void				ok_handler(void);
+int					ft_is_sorted(t_list **stack);
+void				ft_loop(t_list **stack_a, t_list **stack_b);
+char				*get_next_line(int fd);
+size_t				ft_strlenn(const char *s);
+char				*ft_strjoinn(char *stash, char *buffer);
+char				*ft_strchr(char *s, int c);
+size_t				ft_strlenn(const char *s);
+void				read_execution(t_list **stack_a, t_list **stack_b,
+						char *str);
 
 #endif

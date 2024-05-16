@@ -6,7 +6,7 @@
 /*   By: moaregra <moaregra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 12:09:18 by moaregra          #+#    #+#             */
-/*   Updated: 2024/05/12 18:04:29 by moaregra         ###   ########.fr       */
+/*   Updated: 2024/05/16 10:42:48 by moaregra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,7 @@ static void	free_str_array(char **arr)
 		free(arr);
 	}
 }
-void	print_stack(t_list **stack)
-{
-	t_list *tmp = *stack;
-	while(tmp)
-	{
-		printf("%d ,",tmp->value);
-		tmp = tmp->next;
-	}
-}
+
 int	main(int ac, char **av)
 {
 	t_list	*stack_a;
